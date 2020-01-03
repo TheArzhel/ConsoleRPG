@@ -1,9 +1,18 @@
 #include "Steps.h"
 
-void Start()
+void GameController::StartGame()
 {
+	
+	Teams.FillAllyParty();
+	Teams.FillEnemyPatry();
 
 	Game.start();
-	
-	//for (int i = 0; i )
+
+	Game.Attack(Teams.Kieran);
+	Game.Attack(Teams.Warth);
+	Game.Attack(Teams.Martial);
+
+	// for (int i = 0; i )
 }
+
+

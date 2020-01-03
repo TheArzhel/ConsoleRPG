@@ -44,6 +44,7 @@ void Text::Attack(Character toattack)
 			Attack(toattack);
 			break;
 		}
+		cout << endl;
 	}
 	else
 	{
@@ -70,7 +71,8 @@ void Text::Attack(Character toattack)
 			Attack(toattack);
 			break;
 		}
-		toattack.nextMove = action;
+		
+		cout << endl;
 	}
 
 	
@@ -85,7 +87,7 @@ bool Text::checkVitality(Character toattack)
 
 	for (int i = 0; i < 3; i++)
 	{
-		if (toattack.stats.vtl < toattack.specialCost[i])
+		if (toattack.stats.vtl >= toattack.specialCost[i])
 		{
 			ret = true;
 			break;
@@ -119,7 +121,7 @@ void Text::DisplaySpecialAttackMenu(Character toattack)
 	if (action == 4)
 	{
 		DisplaySpecialAtackInfo(toattack);
-		system("pause");
+		
 
 		DisplaySpecialAttackMenu(toattack);
 	}
@@ -145,27 +147,27 @@ void Text::DisplayBasicInfo(Character toattack)
 	cout << "Defend: Prepare to recive the enemy attack and counter attack" << endl;
 	cout << "Special Atack: Select on of the options if you have enough vitality. Powerfull attacks" << endl;
 
-	cout << toattack.name.data() << "HP" << toattack.stats.hp << endl;
-	cout << toattack.name.data() << "Vitality" << toattack.stats.vtl << endl;
+	cout << toattack.name.data() << "HP: " << toattack.stats.hp << endl;
+	cout << toattack.name.data() << "Vitality: " << toattack.stats.vtl << endl;
 	
 }
 
 void Text::DisplaySpecialAtackInfo(Character toattack)
 {
-	if (toattack.name.data() == "Kieran")
+	if (toattack.ID == 1)
 	{
 		cout << "Kieran list of Special Attacks:" << endl;
 		cout << "Embrace: Boost a Attack and Defense for the next attack. Cost: 15 vtl" << endl;
 		cout << "Silence: Boost a stat to the maximun value for one move. Cost 30 vtl" << endl;
 	}
-	else if (toattack.name.data() == "Warth")
+	else if (toattack.ID == 2)
 	{
 		cout << "Warth list of Special Attacks:" << endl;
 		cout << "Touch: Drains enemy vtl points. Cost: 5 vtl" << endl;
 		cout << "Onda: Stunt enemy for the next turn. Cost: 5 vtl" << endl;
 		cout << "Grip: Holds the enemy tight darining vitaility and stopping attacker and enemy for 2 turns. Cost: 10" << endl;
 	}
-	else if (toattack.name.data() == "Martial")
+	else if (toattack.ID == 3)
 	{
 		cout << "Martial has no Special Attacks:" << endl;
 		

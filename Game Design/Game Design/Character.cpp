@@ -16,6 +16,7 @@ void CharacterTeams::FillAllyParty()
 	Kieran.SpecialAtackNames[1] = "Silence";
 	Kieran.specialCost[0] = 15;
 	Kieran.specialCost[1] = 30;
+	Kieran.ID = 1;
 
 	WarthStats.hp = 350;
 	WarthStats.vtl = 75;
@@ -33,6 +34,7 @@ void CharacterTeams::FillAllyParty()
 	Warth.specialCost[0] = 5;
 	Warth.specialCost[1] = 5;
 	Warth.specialCost[2] = 10;
+	Warth.ID = 2;
 
 	MartialStats.hp = 470;
 	MartialStats.vtl = 94;
@@ -50,6 +52,7 @@ void CharacterTeams::FillAllyParty()
 	Martial.specialCost[0] = 0;
 	Martial.specialCost[1] = 0;
 	Martial.specialCost[2] = 0;
+	Martial.ID = 3;
 
 	Ally.character1 = Kieran;
 	Ally.character2 = Warth;
@@ -72,6 +75,7 @@ void CharacterTeams::FillEnemyPatry()
 	Maldur.stats = MaldurStats;
 	Maldur.SpecialAtackNames[0] = "Telekinesis";
 	Maldur.specialCost[0] = 15;
+	Maldur.ID = 0;
 
 	Enemy.character1 = Maldur;
 	Enemy.Party_number = 1;

@@ -3,8 +3,17 @@
 
 #include "ConsoleText.h"
 
-void Start();
 
-Text Game;
+class GameController
+{
+
+
+public:
+	void StartGame();
+	CharacterTeams Teams;
+	Text Game;
+
+
+};
 
 #endif

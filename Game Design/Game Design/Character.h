@@ -3,19 +3,6 @@
 
 #include "Globals.h"
 
-struct Character
-{
-	string name;
-	Stats stats;
-	int SpecialAtacks;
-	int specialCost[3];
-	string SpecialAtackNames[3];
-	int nextMove;
-	int nextSpecialMove;
-
-
-};
-
 struct Stats
 {
 	int hp;
@@ -27,19 +14,32 @@ struct Stats
 
 };
 
+struct Character
+{
+	string name;
+	Stats stats;
+	int SpecialAtacks;
+	int specialCost[3];
+	string SpecialAtackNames[3];
+	int nextMove;
+	int nextSpecialMove;
+	int ID;
+
+};
+
+
 struct Party {
 
 	Character character1;
 	Character character2;
 	Character character3;
-	
+
 
 	//Item
 
 	bool Ally;
 	int Party_number;
 };
-
 struct control_Var
 {
 
@@ -69,6 +69,10 @@ struct control_Var
 
 class CharacterTeams
 {
+public:
+	//structs and containers
+	
+
 public:
 
 	//ally
